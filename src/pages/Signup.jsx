@@ -1,22 +1,49 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/firebase.config";
 import toast from "react-hot-toast";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
+import { AuthContext } from "../context/AuthContext";
+import { RiseLoader } from "react-spinners";
 
 const Signup = () => {
   const [show, setShow] = useState(false);
+  const {
+    createUserWithEmailAndPasswordFunc,
+    updateProfileFunc,
+    setLoading,
+    signoutUserFunc,
+    setUser,
+    user,
+    loading
+  } = useContext(AuthContext);
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+  if (!loading && user) {
+    navigate("/", { replace: true });
+  }
+}, [user, loading, navigate]);
+
+if (loading || user) {
+  return (
+    <div className="h-screen flex items-center justify-center">
+      <RiseLoader color="#f43f5e" size={30} margin={4} />
+    </div>
+  );
+}
+
   const handleSignup = (e) => {
     e.preventDefault();
-    const name = e.target.name?.value;
+    const displayName = e.target.name?.value;
     const photoURL = e.target.photo?.value;
     const email = e.target.email?.value;
     const password = e.target.password?.value;
+
     console.log("sign up function entered", {
-      name,
+      displayName,
       photoURL,
       email,
       password,
@@ -32,10 +59,22 @@ const Signup = () => {
       return;
     }
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((res) => {
-        console.log(res);
-        toast.success("Successfully completed!");
+    // createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPasswordFunc(email, password)
+      .then(() => {
+        updateProfileFunc(displayName, photoURL)
+          .then((res) => {
+            setLoading(false);
+            console.log(res);
+            signoutUserFunc().then(() => {
+              toast.success("Successfully Signup completed!");
+              setUser(null);
+              navigate("/login")
+            });
+          })
+          .catch((e) => {
+            toast.error(e.message);
+          });
       })
       .catch((e) => {
         console.log(e);

@@ -1,31 +1,51 @@
 import { Link } from "react-router-dom";
 import "./Login.css";
-import { useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
-import {
-  GoogleAuthProvider,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  signOut,
-} from "firebase/auth";
-import { auth } from "../firebase/firebase.config";
 import toast from "react-hot-toast";
+import { AuthContext } from "../context/AuthContext";
+import { useLocation, useNavigate } from "react-router";
+import { RiseLoader } from "react-spinners";
 
-const googleProvider = new GoogleAuthProvider();
+
 const Login = () => {
-  const [user, setUser] = useState(null);
   const [show, setShow] = useState(false);
+
+  const {signInWithEmailAndPasswordFunc, signInWithPopupFunc, sendPasswordResetEmailFunc,user,setUser, setLoading, loading} = useContext(AuthContext)
+
+  const location = useLocation()
+  const from = location.state || "/" ;
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!loading && user) {
+      navigate("/", { replace: true });
+    }
+  }, [user, loading, navigate]);
+  if (loading || user) {
+  return (
+    <div className="h-screen flex items-center justify-center">
+      <RiseLoader color="#f43f5e" size={30} margin={4} />
+    </div>
+  );
+}
+
+  console.log(location);
+
+  const emailRef = useRef(null)
   const handleSignin = (e) => {
     e.preventDefault();
     const email = e.target.email?.value;
     const password = e.target.password?.value;
     console.log({ email, password });
-    signInWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPasswordFunc(email, password)
       .then((res) => {
         console.log(res);
+        setLoading(false)
         setUser(res.user);
         toast.success("Signin successful!");
+        navigate(from)
       })
       .catch((e) => {
         console.log(e);
@@ -35,10 +55,12 @@ const Login = () => {
 
   const handleGoogleSignin = () => {
     console.log("google sign in");
-    signInWithPopup(auth, googleProvider)
+    signInWithPopupFunc()
       .then((res) => {
         console.log(res);
+        setLoading(false)
         setUser(res.user);
+        navigate(from)
         toast.success("Signin successful!");
       })
       .catch((e) => {
@@ -47,17 +69,19 @@ const Login = () => {
       });
   };
 
-  const handleSignOut = () => {
-    signOut(auth)
-      .then(() => {
-        toast.success("Signout successful!");
-        setUser(null);
-      })
-      .catch((e) => {
-        console.log(e);
-        toast.error(e.message);
-      });
-  };
+ 
+
+  const handleForgetPassword = () =>{
+    console.log();
+    const email = emailRef.current.value
+    sendPasswordResetEmailFunc(email)
+    .then(()=>{
+      setLoading(false)
+      toast.success("Password reset link sent! Please check your inbox.")
+    }).catch((e)=>{
+      toast.error(e.message)
+    })
+  }
 
   console.log(user);
   return (
@@ -65,26 +89,15 @@ const Login = () => {
       <div className="forms-container">
         <div className="signin-signup">
           {/* ================= LOGIN FORM ================= */}
-          {user ? (
-            <div className="text-center space-y-3">
-              <img
-                src={user?.photoURL || "https://via.placeholder.com/88"}
-                className="h-20 w-20 rounded-full mx-auto"
-                alt=""
-              />
-              <h2 className="text-xl font-semibold">{user?.displayName}</h2>
-              <p>{user?.email}</p>
-              <button onClick={handleSignOut} className="my-btn">
-                Sign Out
-              </button>
-            </div>
-          ) : (
+         
             <form onSubmit={handleSignin} className="sign-in-form">
               <h2 className="title font-bold">Log in</h2>
 
               <div className="input-field">
                 <i className="fa-solid fa-envelope"></i>
-                <input type="email" name="email" required placeholder="Email" />
+                <input type="email" name="email"
+                ref={emailRef}
+                required placeholder="Email" />
               </div>
 
               <div className="input-field relative">
@@ -102,6 +115,10 @@ const Login = () => {
                   {show ? <FaEye /> : <IoEyeOff />}
                 </span>
               </div>
+
+              <button className="hover:underline cursor-pointer text-blue-400 font-semibold"  onClick={handleForgetPassword}
+              type="button"
+              >Forget password?</button>
 
               <input type="submit" value="Login" className="btn solid" />
 
@@ -129,7 +146,6 @@ const Login = () => {
                 </a>
               </div>
             </form>
-          )}
         </div>
       </div>
 
