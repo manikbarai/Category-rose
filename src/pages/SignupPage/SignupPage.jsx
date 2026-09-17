@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   FaEnvelope,
   FaLock,
@@ -8,6 +8,7 @@ import {
   FaEye,
   FaEyeSlash,
   FaCheck,
+  FaGoogle,
 } from "react-icons/fa";
 
 import "./SignupPage.css";
@@ -16,26 +17,30 @@ import { RiseLoader } from "react-spinners";
 import toast from "react-hot-toast";
 
 const SignupPage = () => {
- 
-
   const [showPassword, setShowPassword] = useState(false);
-  const {createUserWithEmailAndPasswordFunc,
+  const {
+    createUserWithEmailAndPasswordFunc,
     updateProfileFunc,
     setLoading,
     signoutUserFunc,
     setUser,
+    signInWithPopupFunc,
     user,
-    loading} = useContext(AuthContext)
+    loading,
+  } = useContext(AuthContext);
 
-    const navigate = useNavigate()
+  const location = useLocation();
+  const from = location.state || "/";
 
-     useEffect(() => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
     if (!loading && user) {
       navigate("/", { replace: true });
     }
   }, [user, loading, navigate]);
 
-   if (loading || user) {
+  if (loading || user) {
     return (
       <div className="h-screen flex items-center justify-center">
         <RiseLoader color="#687cdb" size={30} margin={4} />
@@ -54,11 +59,10 @@ const SignupPage = () => {
 
     // Required Field Validation
 
-     if (!displayName && !photoURL && !email && !password) {
-    toast.error("Please enter your full details.");
-    return;
-  }
-
+    if (!displayName && !photoURL && !email && !password) {
+      toast.error("Please enter your full details.");
+      return;
+    }
 
     if (!displayName) {
       toast.error("Please enter your full name.");
@@ -92,90 +96,97 @@ const SignupPage = () => {
     setLoading(true);
 
     createUserWithEmailAndPasswordFunc(email, password)
-    .then(() => {
-      updateProfileFunc(displayName, photoURL)
-        .then((res) => {
-          console.log(res);
+      .then(() => {
+        updateProfileFunc(displayName, photoURL)
+          .then((res) => {
+            console.log(res);
 
-          signoutUserFunc().then(() => {
-            toast.success("Successfully Signup completed!");
+            signoutUserFunc().then(() => {
+              toast.success("Successfully Signup completed!");
 
-            setUser(null);
+              setUser(null);
 
-            navigate("/login", { replace: true });
+              navigate("/login", { replace: true });
+            });
+          })
+          .catch((e) => {
+            console.log(e);
+
+            if (e.code === "auth/network-request-failed") {
+              toast.error(
+                "Unable to connect to the server. Please check your internet connection and try again.",
+              );
+            } else {
+              toast.error("Unable to update your profile. Please try again.");
+            }
+          })
+          .finally(() => {
+            setLoading(false);
           });
-        })
-        .catch((e) => {
-          console.log(e);
+      })
+      .catch((e) => {
+        console.log(e);
 
-          if (e.code === "auth/network-request-failed") {
-            toast.error(
-              "Unable to connect to the server. Please check your internet connection and try again.",
-            );
-          } else {
-            toast.error(
-              "Unable to update your profile. Please try again.",
-            );
-          }
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    })
-    .catch((e) => {
-      console.log(e);
+        if (e.code == "auth/email-already-in-use") {
+          toast.error("User already exists in database!");
+        } else if (e.code === "auth/invalid-email") {
+          toast.error(
+            "The email address you entered is invalid. Please check the format and try again.",
+          );
+        } else if (e.code === "auth/weak-password") {
+          toast.error(
+            "Your password does not meet the minimum security requirements. Please choose a stronger password.",
+          );
+        } else if (e.code === "auth/user-not-found") {
+          toast.error(
+            "No account was found with this email address. Please check your email or create a new account.",
+          );
+        } else if (e.code === "auth/wrong-password") {
+          toast.error(
+            "The password you entered is incorrect. Please verify your credentials and try again.",
+          );
+        } else if (e.code === "auth/user-disabled") {
+          toast.error(
+            "This account has been disabled. Please contact support for assistance.",
+          );
+        } else if (e.code === "auth/too-many-requests") {
+          toast.error(
+            "Too many unsuccessful attempts. Please wait a few minutes and try again.",
+          );
+        } else if (e.code === "auth/operation-not-allowed") {
+          toast.error(
+            "This authentication method is currently unavailable. Please contact support.",
+          );
+        } else if (e.code === "auth/network-request-failed") {
+          toast.error(
+            "Unable to connect to the server. Please check your internet connection and try again.",
+          );
+        } else {
+          toast.error("Something went wrong. Please try again.");
+        }
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
-      if (e.code == "auth/email-already-in-use") {
-        toast.error("User already exists in database!");
-
-      } else if (e.code === "auth/invalid-email") {
-        toast.error(
-          "The email address you entered is invalid. Please check the format and try again.",
-        );
-
-      } else if (e.code === "auth/weak-password") {
-        toast.error(
-          "Your password does not meet the minimum security requirements. Please choose a stronger password.",
-        );
-
-      } else if (e.code === "auth/user-not-found") {
-        toast.error(
-          "No account was found with this email address. Please check your email or create a new account.",
-        );
-
-      } else if (e.code === "auth/wrong-password") {
-        toast.error(
-          "The password you entered is incorrect. Please verify your credentials and try again.",
-        );
-
-      } else if (e.code === "auth/user-disabled") {
-        toast.error(
-          "This account has been disabled. Please contact support for assistance.",
-        );
-
-      } else if (e.code === "auth/too-many-requests") {
-        toast.error(
-          "Too many unsuccessful attempts. Please wait a few minutes and try again.",
-        );
-
-      } else if (e.code === "auth/operation-not-allowed") {
-        toast.error(
-          "This authentication method is currently unavailable. Please contact support.",
-        );
-
-      } else if (e.code === "auth/network-request-failed") {
-        toast.error(
-          "Unable to connect to the server. Please check your internet connection and try again.",
-        );
-
-      } else {
-        toast.error("Something went wrong. Please try again.");
-      }
-    })
-    .finally(() => {
-      setLoading(false);
-    });
-  }
+  const handleGoogleSignup = () => {
+    console.log("google sign in");
+    signInWithPopupFunc()
+      .then((res) => {
+        console.log(res);
+        setUser(res.user);
+        navigate(from);
+        toast.success("Signin successful!");
+      })
+      .catch((e) => {
+        console.log(e);
+        toast.error(e.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
   return (
     <main className="premium-signup-page">
@@ -354,8 +365,9 @@ const SignupPage = () => {
           </div>
 
           {/* Form */}
-          <form className="premium-signup-form"
-          onSubmit={handleSignup}
+          <form
+            className="premium-signup-form"
+            onSubmit={handleSignup}
             noValidate
           >
             {/* Name */}
@@ -433,7 +445,6 @@ const SignupPage = () => {
               </div>
             </div>
 
-
             {/* Password Requirement */}
             <div className="password-requirement">
               <div className="requirement-icon">
@@ -447,8 +458,10 @@ const SignupPage = () => {
             </div>
 
             {/* Button */}
-            <button type="submit" className="premium-signup-button"
-            disabled={loading}
+            <button
+              type="submit"
+              className="premium-signup-button"
+              disabled={loading}
             >
               <span>
                 {loading ? "Creating account..." : "Create my account"}
@@ -457,6 +470,26 @@ const SignupPage = () => {
               {!loading && <div className="signup-button-arrow">→</div>}
             </button>
           </form>
+
+          {/* Google Sign Up */}
+          <div className="google-signup-divider">
+            <span></span>
+            <p>OR</p>
+            <span></span>
+          </div>
+
+          <button
+            type="button"
+            className="google-signup-button"
+            onClick={handleGoogleSignup}
+            disabled={loading}
+          >
+            <FaGoogle />
+
+            <span>
+              {loading ? "Connecting to Google..." : "Continue with Google"}
+            </span>
+          </button>
 
           {/* Login */}
           <div className="already-account">
