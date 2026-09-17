@@ -1,0 +1,1679 @@
+/* =========================================================
+   WINTERPAWS — PREMIUM SIGNUP
+========================================================= */
+
+.premium-signup-page {
+  width: min(1550px, calc(100% - 40px));
+  min-height: calc(100vh - 110px);
+
+  margin: 30px auto 40px;
+
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  background: #f7fbff;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    0 35px 90px rgba(31, 55, 86, 0.17),
+    0 15px 40px rgba(31, 55, 86, 0.08);
+}
+
+
+/* =========================================================
+   LEFT VISUAL
+========================================================= */
+
+.signup-visual {
+  min-height: 780px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #081e35 0%,
+      #0d304e 38%,
+      #164b68 68%,
+      #2c6880 100%
+    );
+}
+
+
+/* =========================================================
+   AURORA
+========================================================= */
+
+.aurora {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(45px);
+
+  opacity: 0.35;
+
+  pointer-events: none;
+}
+
+.aurora-one {
+  width: 520px;
+  height: 190px;
+
+  top: -40px;
+  left: 5%;
+
+  background: rgba(112, 214, 210, 0.28);
+
+  transform: rotate(-10deg);
+}
+
+.aurora-two {
+  width: 420px;
+  height: 150px;
+
+  top: 70px;
+  right: 0;
+
+  background: rgba(126, 184, 224, 0.22);
+
+  transform: rotate(15deg);
+}
+
+.aurora-three {
+  width: 500px;
+  height: 160px;
+
+  top: 160px;
+  left: 20%;
+
+  background: rgba(117, 220, 203, 0.12);
+
+  transform: rotate(-18deg);
+}
+
+
+/* =========================================================
+   MOON
+========================================================= */
+
+.signup-moon {
+  position: absolute;
+
+  width: 108px;
+  height: 108px;
+
+  top: 72px;
+  right: 88px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #ffffff,
+      #e8f5fc 65%,
+      #c9e1ed
+    );
+
+  box-shadow:
+    0 0 35px rgba(220, 245, 255, 0.45),
+    0 0 100px rgba(180, 225, 245, 0.18);
+}
+
+.moon-crater {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: rgba(171, 202, 218, 0.25);
+}
+
+.crater-one {
+  width: 17px;
+  height: 17px;
+
+  top: 28px;
+  left: 28px;
+}
+
+.crater-two {
+  width: 11px;
+  height: 11px;
+
+  top: 55px;
+  left: 58px;
+}
+
+.crater-three {
+  width: 7px;
+  height: 7px;
+
+  top: 38px;
+  right: 23px;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.signup-star {
+  position: absolute;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 0 8px rgba(255, 255, 255, 0.9);
+
+  animation: starGlow 3s ease-in-out infinite;
+}
+
+.s1 {
+  top: 80px;
+  left: 15%;
+}
+
+.s2 {
+  top: 140px;
+  left: 30%;
+  animation-delay: 0.7s;
+}
+
+.s3 {
+  top: 105px;
+  left: 47%;
+  animation-delay: 1.4s;
+}
+
+.s4 {
+  top: 185px;
+  right: 32%;
+  animation-delay: 2s;
+}
+
+.s5 {
+  top: 55px;
+  right: 43%;
+  animation-delay: 0.4s;
+}
+
+.s6 {
+  top: 225px;
+  left: 12%;
+  animation-delay: 1s;
+}
+
+.s7 {
+  top: 280px;
+  right: 15%;
+  animation-delay: 1.8s;
+}
+
+.s8 {
+  top: 320px;
+  left: 37%;
+  animation-delay: 2.5s;
+}
+
+@keyframes starGlow {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+
+/* =========================================================
+   SNOW
+========================================================= */
+
+.signup-snow span {
+  position: absolute;
+
+  top: -15px;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  animation: snowFall linear infinite;
+}
+
+.signup-snow span:nth-child(1) {
+  left: 5%;
+  animation-duration: 8s;
+}
+
+.signup-snow span:nth-child(2) {
+  left: 12%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.signup-snow span:nth-child(3) {
+  left: 19%;
+  animation-duration: 12s;
+}
+
+.signup-snow span:nth-child(4) {
+  left: 27%;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+
+.signup-snow span:nth-child(5) {
+  left: 35%;
+  animation-duration: 11s;
+}
+
+.signup-snow span:nth-child(6) {
+  left: 43%;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+
+.signup-snow span:nth-child(7) {
+  left: 51%;
+  animation-duration: 13s;
+}
+
+.signup-snow span:nth-child(8) {
+  left: 58%;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+
+.signup-snow span:nth-child(9) {
+  left: 66%;
+  animation-duration: 9s;
+}
+
+.signup-snow span:nth-child(10) {
+  left: 74%;
+  animation-duration: 12s;
+  animation-delay: 3s;
+}
+
+.signup-snow span:nth-child(11) {
+  left: 82%;
+  animation-duration: 8s;
+}
+
+.signup-snow span:nth-child(12) {
+  left: 90%;
+  animation-duration: 11s;
+  animation-delay: 2s;
+}
+
+.signup-snow span:nth-child(13) {
+  left: 24%;
+  animation-duration: 14s;
+}
+
+.signup-snow span:nth-child(14) {
+  left: 48%;
+  animation-duration: 10s;
+}
+
+.signup-snow span:nth-child(15) {
+  left: 70%;
+  animation-duration: 13s;
+}
+
+.signup-snow span:nth-child(16) {
+  left: 85%;
+  animation-duration: 9s;
+}
+
+.signup-snow span:nth-child(17) {
+  left: 58%;
+  animation-duration: 14s;
+}
+
+.signup-snow span:nth-child(18) {
+  left: 10%;
+  animation-duration: 12s;
+}
+
+@keyframes snowFall {
+  from {
+    transform: translateY(-20px) translateX(0);
+  }
+
+  to {
+    transform: translateY(850px) translateX(55px);
+  }
+}
+
+
+/* =========================================================
+   MOUNTAINS
+========================================================= */
+
+.mountain {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 0;
+  height: 0;
+}
+
+.mountain-back {
+  left: -130px;
+
+  border-left: 280px solid transparent;
+  border-right: 280px solid transparent;
+  border-bottom: 250px solid rgba(206, 231, 242, 0.17);
+}
+
+.mountain-middle {
+  right: 8%;
+
+  border-left: 250px solid transparent;
+  border-right: 250px solid transparent;
+  border-bottom: 290px solid rgba(174, 210, 226, 0.16);
+}
+
+.mountain-front {
+  right: -170px;
+
+  border-left: 330px solid transparent;
+  border-right: 330px solid transparent;
+  border-bottom: 330px solid rgba(4, 30, 48, 0.45);
+}
+
+
+/* =========================================================
+   PINE TREES
+========================================================= */
+
+.pine {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 0;
+  height: 0;
+
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-bottom: 155px solid rgba(5, 42, 59, 0.9);
+}
+
+.pine::after {
+  content: "";
+
+  position: absolute;
+
+  width: 14px;
+  height: 75px;
+
+  left: -7px;
+  bottom: -155px;
+
+  background: #3b3028;
+}
+
+.pine i {
+  position: absolute;
+
+  left: -80px;
+
+  width: 160px;
+  height: 62px;
+
+  border-radius: 50%;
+
+  background: rgba(6, 49, 65, 0.95);
+}
+
+.pine i:nth-child(1) {
+  bottom: -62px;
+}
+
+.pine i:nth-child(2) {
+  bottom: -94px;
+}
+
+.pine i:nth-child(3) {
+  bottom: -126px;
+}
+
+.pine-left {
+  left: 3%;
+  transform: scale(0.85);
+}
+
+.pine-center {
+  left: 25%;
+  transform: scale(1.1);
+}
+
+.pine-right {
+  right: 5%;
+  transform: scale(0.95);
+}
+
+
+/* =========================================================
+   PREMIUM PET HOUSE
+========================================================= */
+
+.premium-pet-house {
+  position: absolute;
+
+  width: 205px;
+  height: 175px;
+
+  right: 22%;
+  bottom: 40px;
+
+  z-index: 3;
+}
+
+
+/* Roof */
+
+.house-roof {
+  position: absolute;
+
+  width: 0;
+  height: 0;
+
+  left: 3px;
+  top: 8px;
+
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 78px solid #4d7187;
+
+  z-index: 2;
+}
+
+.roof-snow {
+  position: absolute;
+
+  width: 205px;
+  height: 17px;
+
+  left: -103px;
+  top: -5px;
+
+  border-radius: 50%;
+
+  background: #eef8fd;
+}
+
+
+/* Chimney */
+
+.house-chimney {
+  position: absolute;
+
+  width: 27px;
+  height: 65px;
+
+  right: 38px;
+  top: 3px;
+
+  border-radius: 4px;
+
+  background: #6d5043;
+
+  z-index: 1;
+}
+
+
+/* Main */
+
+.house-main {
+  position: absolute;
+
+  width: 160px;
+  height: 105px;
+
+  left: 22px;
+  bottom: 0;
+
+  border-radius: 7px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #765342,
+      #a17151,
+      #6b4939
+    );
+
+  box-shadow:
+    0 18px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+/* Window */
+
+.house-window {
+  position: absolute;
+
+  width: 31px;
+  height: 31px;
+
+  right: 18px;
+  top: 21px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #ffd979;
+
+  box-shadow:
+    0 0 25px rgba(255, 211, 113, 0.5);
+}
+
+.house-window span {
+  width: 3px;
+  height: 25px;
+
+  background: rgba(139, 98, 52, 0.35);
+}
+
+
+/* Door */
+
+.house-door {
+  position: absolute;
+
+  width: 45px;
+  height: 66px;
+
+  left: 58px;
+  bottom: 0;
+
+  border-radius: 22px 22px 0 0;
+
+  background: #2c3840;
+
+  border: 4px solid #634433;
+}
+
+.door-knob {
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #d6a968;
+
+  right: 7px;
+  top: 34px;
+}
+
+
+/* Paw */
+
+.house-paw {
+  position: absolute;
+
+  left: 9px;
+  bottom: 16px;
+
+  font-size: 18px;
+
+  opacity: 0.8;
+}
+
+
+/* Smoke */
+
+.smoke {
+  position: absolute;
+
+  right: 30px;
+  top: -55px;
+}
+
+.smoke span {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: rgba(241, 249, 253, 0.35);
+
+  animation: smoke 4s ease-in-out infinite;
+}
+
+.smoke span:nth-child(1) {
+  bottom: 0;
+}
+
+.smoke span:nth-child(2) {
+  bottom: 22px;
+  right: 12px;
+  animation-delay: 1s;
+}
+
+.smoke span:nth-child(3) {
+  bottom: 45px;
+  right: 3px;
+  animation-delay: 2s;
+}
+
+@keyframes smoke {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translate(0, 0) scale(0.8);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translate(13px, -12px) scale(1.15);
+  }
+}
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.floating-card {
+  position: absolute;
+
+  z-index: 6;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 16px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(15px);
+
+  color: white;
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.13);
+
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.floating-card-one {
+  left: 7%;
+  top: 24%;
+}
+
+.floating-card-two {
+  right: 7%;
+  bottom: 22%;
+
+  animation-delay: 1.4s;
+}
+
+.floating-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.floating-card div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.floating-card strong {
+  font-size: 10px;
+}
+
+.floating-card span {
+  font-size: 8px;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =========================================================
+   VISUAL CONTENT
+========================================================= */
+
+.signup-visual-content {
+  position: relative;
+
+  z-index: 8;
+
+  width: min(570px, 78%);
+
+  margin-top: 40px;
+
+  color: white;
+}
+
+.visual-logo {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 23px;
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.11);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.visual-logo span {
+  font-size: 21px;
+}
+
+.visual-label {
+  margin-bottom: 13px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.signup-visual-content h1 {
+  margin: 0;
+
+  font-size: clamp(42px, 4.3vw, 65px);
+
+  line-height: 1.01;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+}
+
+.signup-visual-content h1 span {
+  color: #d9f3ff;
+}
+
+.signup-visual-content > p {
+  max-width: 470px;
+
+  margin: 25px 0 0;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.67);
+}
+
+
+/* Benefits */
+
+.visual-benefits {
+  display: flex;
+
+  gap: 24px;
+
+  margin-top: 30px;
+}
+
+.visual-benefits div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.visual-benefits span {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  font-size: 8px;
+}
+
+.visual-benefits p {
+  margin: 0;
+
+  font-size: 9px;
+
+  color: rgba(255, 255, 255, 0.68);
+}
+
+
+/* =========================================================
+   FORM SIDE
+========================================================= */
+
+.signup-form-side {
+  min-height: 780px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 18%,
+      rgba(255, 255, 255, 0.98),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 88% 80%,
+      rgba(168, 207, 231, 0.4),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #f1f7fb,
+      #e6f0f7 48%,
+      #dce9f2
+    );
+}
+
+
+/* Form Glows */
+
+.form-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(10px);
+}
+
+.form-glow-one {
+  width: 390px;
+  height: 390px;
+
+  top: -200px;
+  right: -150px;
+
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.form-glow-two {
+  width: 300px;
+  height: 300px;
+
+  bottom: -160px;
+  left: -130px;
+
+  background: rgba(153, 198, 225, 0.24);
+}
+
+.form-glow-three {
+  width: 180px;
+  height: 180px;
+
+  top: 45%;
+  right: -90px;
+
+  background: rgba(255, 255, 255, 0.5);
+
+  filter: blur(25px);
+}
+
+
+/* =========================================================
+   SIGNUP CARD
+========================================================= */
+
+.signup-card {
+  width: min(480px, 84%);
+
+  position: relative;
+
+  z-index: 10;
+
+  padding: 39px 43px 29px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  background: rgba(255, 255, 255, 0.79);
+
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+
+  box-shadow:
+    0 35px 80px rgba(39, 69, 98, 0.13),
+    0 12px 30px rgba(39, 69, 98, 0.06);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.signup-card-header {
+  text-align: left;
+}
+
+.signup-card-icon {
+  width: 51px;
+  height: 51px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e3f2fb,
+      #f7fcff
+    );
+
+  border: 1px solid rgba(112, 166, 199, 0.15);
+
+  font-size: 17px;
+
+  box-shadow:
+    0 10px 25px rgba(60, 105, 135, 0.08);
+}
+
+.signup-small-label {
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 2.2px;
+
+  color: #7892a5;
+}
+
+.signup-card-header h2 {
+  margin: 8px 0 8px;
+
+  font-size: 35px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.7px;
+
+  font-weight: 800;
+
+  color: #203b50;
+}
+
+.signup-card-header p {
+  margin: 0;
+
+  font-size: 10.5px;
+
+  line-height: 1.75;
+
+  color: #8395a4;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.premium-signup-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+
+  margin-top: 23px;
+}
+
+.signup-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.signup-field label {
+  padding-left: 2px;
+
+  font-size: 8.5px;
+
+  font-weight: 700;
+
+  color: #536c7e;
+}
+
+
+/* Input */
+
+.signup-input {
+  position: relative;
+}
+
+.signup-input > svg {
+  position: absolute;
+
+  left: 17px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #91a6b6;
+
+  font-size: 11px;
+
+  pointer-events: none;
+}
+
+.signup-input input {
+  width: 100%;
+  height: 52px;
+
+  box-sizing: border-box;
+
+  padding: 0 44px 0 44px;
+
+  border: 1px solid #dce6ed;
+
+  outline: none;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  color: #263e51;
+
+  font-family: inherit;
+
+  font-size: 10.5px;
+
+  transition:
+    0.25s ease;
+}
+
+.signup-input input::placeholder {
+  color: #a3b1bc;
+}
+
+.signup-input input:focus {
+  border-color: #91bfd7;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 0 0 4px rgba(102, 165, 195, 0.09);
+}
+
+
+/* Eye */
+
+.password-eye {
+  position: absolute;
+
+  right: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 29px;
+  height: 29px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: #8da1ae;
+
+  cursor: pointer;
+
+  font-size: 10px;
+
+  transition: 0.2s ease;
+}
+
+.password-eye:hover {
+  color: #416d88;
+}
+
+
+/* =========================================================
+   PASSWORD SECURITY
+========================================================= */
+
+.password-requirement {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+  
+  margin-top: -1px;
+
+  padding: 9px 11px;
+
+  border-radius: 11px;
+
+  background: rgba(235, 246, 252, 0.65);
+
+  border: 1px solid rgba(179, 211, 228, 0.4);
+}
+
+.requirement-icon {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #dceef8;
+
+  color: #54819a;
+
+  font-size: 10px;
+}
+
+.password-requirement div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.password-requirement strong {
+  font-size: 10px;
+
+  color: #557085;
+}
+
+.password-requirement span {
+  font-size: 8px;
+
+  color: #8b9ba7;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.premium-signup-button {
+  width: 100%;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 5px;
+
+  padding: 0 8px 0 20px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #294f69,
+      #4d819d
+    );
+
+  font-family: inherit;
+
+  font-size: 10.5px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 15px 30px rgba(45, 83, 107, 0.2);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.premium-signup-button:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.05);
+
+  box-shadow:
+    0 20px 38px rgba(45, 83, 107, 0.26);
+}
+
+.premium-signup-button:active {
+  transform: translateY(0);
+}
+
+.premium-signup-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.signup-button-arrow {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  font-size: 17px;
+
+  transition: 0.25s ease;
+}
+
+.premium-signup-button:hover .signup-button-arrow {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   LOGIN LINK
+========================================================= */
+
+.already-account {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 18px;
+
+  font-size: 12px;
+
+  color: #899aa7;
+}
+
+.already-account a {
+  color: #426d88;
+
+  font-weight: 800;
+ 
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.already-account a:hover {
+  color: #244d67;
+}
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.signup-security {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 7px;
+  margin-bottom: -15px;
+
+  padding-top: 13px;
+
+  border-top: 1px solid rgba(207, 220, 230, 0.65);
+}
+
+.signup-security span {
+  font-size: 8px;
+}
+
+.signup-security p {
+  margin: 0;
+
+  font-size: 10px;
+
+  color: #9aa9b4;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .premium-signup-page {
+    grid-template-columns: 1fr 0.9fr;
+  }
+
+  .signup-visual-content {
+    width: 80%;
+  }
+
+  .signup-visual-content h1 {
+    font-size: 48px;
+  }
+
+  .floating-card {
+    display: none;
+  }
+
+  .premium-pet-house {
+    right: 14%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .premium-signup-page {
+    width: calc(100% - 24px);
+
+    margin: 16px auto 25px;
+
+    grid-template-columns: 1fr;
+
+    border-radius: 24px;
+
+    min-height: auto;
+  }
+
+  .signup-visual {
+    min-height: 500px;
+  }
+
+  .signup-form-side {
+    min-height: auto;
+
+    padding: 65px 0 75px;
+  }
+
+  .signup-visual-content {
+    width: 78%;
+  }
+
+  .signup-visual-content h1 {
+    font-size: 48px;
+  }
+
+  .premium-pet-house {
+    right: 19%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .premium-signup-page {
+    width: calc(100% - 16px);
+
+    margin: 10px auto 20px;
+
+    border-radius: 20px;
+  }
+
+  .signup-visual {
+    min-height: 430px;
+  }
+
+  .signup-moon {
+    width: 68px;
+    height: 68px;
+
+    top: 45px;
+    right: 40px;
+  }
+
+  .signup-visual-content {
+    width: 82%;
+  }
+
+  .visual-logo {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 14px;
+
+    margin-bottom: 17px;
+  }
+
+  .visual-label {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+  .signup-visual-content h1 {
+    font-size: 36px;
+
+    letter-spacing: -1.8px;
+  }
+
+  .signup-visual-content > p {
+    margin-top: 17px;
+
+    font-size: 10px;
+  }
+
+  .visual-benefits {
+    gap: 10px;
+
+    margin-top: 20px;
+  }
+
+  .visual-benefits p {
+    font-size: 7px;
+  }
+
+  .visual-benefits span {
+    width: 17px;
+    height: 17px;
+  }
+
+  .premium-pet-house {
+    width: 135px;
+    height: 115px;
+
+    right: 6%;
+
+    bottom: 18px;
+
+    transform: scale(0.8);
+    transform-origin: bottom right;
+  }
+
+  .signup-form-side {
+    padding: 50px 0 60px;
+  }
+
+  .signup-card {
+    width: calc(100% - 30px);
+
+    padding: 31px 23px 26px;
+
+    border-radius: 24px;
+  }
+
+  .signup-card-icon {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 14px;
+  }
+
+  .signup-card-header h2 {
+    font-size: 29px;
+  }
+
+  .signup-card-header p {
+    font-size: 9.5px;
+  }
+
+  .signup-card-header p br {
+    display: none;
+  }
+
+  .premium-signup-form {
+    gap: 12px;
+
+    margin-top: 21px;
+  }
+
+  .signup-input input {
+    height: 49px;
+
+    border-radius: 14px;
+
+    font-size: 10px;
+  }
+
+  .premium-signup-button {
+    height: 53px;
+
+    border-radius: 14px;
+  }
+
+  .signup-button-arrow {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .signup-visual {
+    min-height: 395px;
+  }
+
+  .signup-visual-content h1 {
+    font-size: 31px;
+  }
+
+  .visual-benefits {
+    display: none;
+  }
+
+  .signup-card {
+    padding: 28px 20px 24px;
+  }
+
+  .signup-card-header h2 {
+    font-size: 27px;
+  }
+}

@@ -3,11 +3,9 @@ import MainLayout from "../layout/MainLayout";
 import Homepage from "../pages/Homepage";
 import AboutUs from "../pages/AboutUs";
 import Profile from "../pages/Profile";
-
-import Login from "../pages/Login";
-import Signup from "../pages/Signup";
 import PrivateRoute from "../privateRoute/PrivateRoute";
-
+import LoginPage from "../pages/LoinPage/LoginPage";
+import SignupPage from "../pages/SignupPage/SignupPage";
 
 export const router = createBrowserRouter([
     {
@@ -28,13 +26,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/login',
-                element: <Login/>,
+                element: <LoginPage/>,
             },
-           
             {
                 path: '/signup',
-                element: <Signup/>,
-            }
+                element: <SignupPage/>,
+            },
         ]
     }
 ])

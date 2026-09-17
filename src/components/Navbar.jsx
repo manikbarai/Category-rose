@@ -22,8 +22,8 @@ const Navbar = () => {
   };
   console.log(loading);
   return (
-    <div className="bg-slate-100 py-2 border-b-slate-300">
-      <MyContainer className={"flex items-center justify-between"}>
+    <div className="bg-slate-100/80 backdrop-blur-lg border-b border-white/70 py-2 border-b-slate-300">
+      <MyContainer className={"flex items-center justify-between px-3 sm:px-6 lg:px-0"}>
         <figure>
           <img src={logo} className="w-[55px] h-[55px] object-contain" />
         </figure>

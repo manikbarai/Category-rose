@@ -1,0 +1,732 @@
+/* =========================================
+   WINTER HERO
+========================================= */
+
+.winter-hero {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #172329;
+  border-radius: 24px;
+   margin-top: 20px;
+}
+
+.winter-swiper {
+  width: 100%;
+  height: 600px;
+}
+
+
+/* =========================================
+   SLIDE
+========================================= */
+
+.winter-slide {
+  width: 100%;
+  height: 600px;
+
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.winter-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 15, 18, 0.94) 0%,
+      rgba(12, 21, 25, 0.78) 28%,
+      rgba(10, 17, 20, 0.32) 56%,
+      rgba(10, 15, 17, 0.05) 100%
+    );
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   WARM LIGHT EFFECT
+========================================= */
+
+.warm-glow {
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  right: 8%;
+  top: -100px;
+
+  background: rgba(255, 180, 70, 0.13);
+
+  filter: blur(80px);
+
+  border-radius: 50%;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.winter-content {
+  position: relative;
+
+  z-index: 4;
+
+  width: 48%;
+
+  margin-left: 8%;
+
+  color: white;
+
+  animation: contentReveal 1s ease;
+}
+
+
+@keyframes contentReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================
+   SMALL TITLE
+========================================= */
+
+.winter-small-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-size: 19px;
+  font-weight: 500;
+
+  color: #f7dfb5;
+
+  margin-bottom: 18px;
+
+  letter-spacing: 0.2px;
+}
+
+
+.winter-small-title .paw {
+  font-size: 26px;
+}
+
+
+.winter-small-title .heart {
+  color: #ff8565;
+
+  font-size: 30px;
+
+  margin-left: 2px;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.winter-title {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: clamp(48px, 5vw, 78px);
+
+  line-height: 0.98;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  text-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.winter-title span {
+  color: #ffb957;
+
+  text-shadow:
+    0 3px 15px rgba(255, 164, 56, 0.15);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.winter-description {
+  max-width: 480px;
+
+  margin-top: 25px;
+  margin-bottom: 27px;
+
+  font-size: 18px;
+
+  line-height: 1.65;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.winter-button {
+  border: none;
+
+  background: linear-gradient(
+    135deg,
+    #ff6949,
+    #ff593a
+  );
+
+  color: white;
+
+  padding: 17px 28px;
+
+  border-radius: 50px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  box-shadow:
+    0 12px 30px rgba(255, 85, 54, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.winter-button span {
+  font-size: 25px;
+
+  line-height: 0;
+
+  transition: transform 0.3s ease;
+}
+
+
+.winter-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 16px 35px rgba(255, 85, 54, 0.38);
+}
+
+
+.winter-button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================
+   DECORATIVE BADGE
+========================================= */
+
+.winter-badge {
+  position: absolute;
+
+  left: 38%;
+
+  bottom: 90px;
+
+  z-index: 5;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  transform: rotate(-7deg);
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+
+.badge-paw {
+  font-size: 38px;
+
+  transform: rotate(8deg);
+}
+
+
+.winter-badge span {
+  line-height: 1.15;
+}
+
+
+/* =========================================
+   WOODEN SIGN
+========================================= */
+
+.winter-sign {
+  position: absolute;
+
+  right: 7%;
+
+  bottom: 40px;
+
+  width: 125px;
+  height: 230px;
+
+  z-index: 4;
+
+  background:
+    linear-gradient(
+      90deg,
+      #a8794d,
+      #c29a6b,
+      #9a6d46
+    );
+
+  border-radius: 5px;
+
+  transform: rotate(3deg);
+
+  box-shadow:
+    5px 8px 20px rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.winter-sign::before {
+  content: "";
+
+  position: absolute;
+
+  top: -12px;
+  left: -7px;
+  right: -7px;
+
+  height: 20px;
+
+  background: #f4f5f2;
+
+  border-radius: 50% 50% 20% 20%;
+
+  box-shadow:
+    0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+.sign-text {
+  font-family: cursive;
+
+  text-align: center;
+
+  color: #3c3027;
+
+  font-size: 22px;
+
+  line-height: 1.35;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   NAVIGATION BUTTONS
+========================================= */
+
+.winter-nav {
+  position: absolute;
+
+  z-index: 20;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 50px;
+  height: 50px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #222;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.18);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.winter-nav span {
+  font-size: 40px;
+
+  font-weight: 300;
+
+  line-height: 1;
+
+  margin-top: -5px;
+}
+
+
+.winter-prev {
+  left: 25px;
+}
+
+
+.winter-next {
+  right: 25px;
+}
+
+
+.winter-nav:hover {
+  background: #fff;
+
+  transform:
+    translateY(-50%)
+    scale(1.08);
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.winter-pagination {
+  position: absolute;
+
+  z-index: 20;
+
+  bottom: 18px !important;
+
+  left: 50% !important;
+
+  transform: translateX(-50%);
+
+  width: auto !important;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.winter-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+
+  opacity: 1;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  margin: 0 !important;
+
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.winter-pagination
+.swiper-pagination-bullet-active {
+  width: 18px;
+
+  border-radius: 20px;
+
+  background: #ff704d;
+}
+
+
+/* =========================================
+   SNOW
+========================================= */
+
+.snow-container {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 10;
+
+  pointer-events: none;
+
+  overflow: hidden;
+}
+
+
+.snowflake {
+  position: absolute;
+
+  top: -15px;
+
+  left: var(--left);
+
+  width: var(--size);
+  height: var(--size);
+
+  border-radius: 50%;
+
+  background: white;
+
+  opacity: var(--opacity);
+
+  filter: blur(0.4px);
+
+  animation:
+    snowfall var(--duration)
+    linear var(--delay)
+    infinite;
+}
+
+
+@keyframes snowfall {
+
+  0% {
+    transform:
+      translate3d(0, -20px, 0)
+      rotate(0deg);
+  }
+
+  25% {
+    transform:
+      translate3d(25px, 160px, 0)
+      rotate(90deg);
+  }
+
+  50% {
+    transform:
+      translate3d(-20px, 320px, 0)
+      rotate(180deg);
+  }
+
+  75% {
+    transform:
+      translate3d(30px, 480px, 0)
+      rotate(270deg);
+  }
+
+  100% {
+    transform:
+      translate3d(-20px, 680px, 0)
+      rotate(360deg);
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .winter-swiper,
+  .winter-slide {
+    height: 560px;
+  }
+
+  .winter-content {
+    width: 55%;
+
+    margin-left: 7%;
+  }
+
+  .winter-badge {
+    left: 42%;
+  }
+
+  .winter-sign {
+    right: 5%;
+  }
+ .winter-hero {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .winter-hero {
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .winter-swiper,
+  .winter-slide {
+    height: 650px;
+  }
+
+
+  .winter-slide {
+    background-position: 65% center;
+
+    align-items: flex-end;
+  }
+
+
+  .winter-overlay {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(7, 14, 17, 0.95) 0%,
+        rgba(8, 15, 18, 0.78) 42%,
+        rgba(8, 15, 18, 0.2) 75%,
+        rgba(8, 15, 18, 0.05) 100%
+      );
+  }
+
+
+  .winter-content {
+    width: 90%;
+
+    margin: 0 auto 80px;
+
+    text-align: center;
+  }
+
+
+  .winter-small-title {
+    justify-content: center;
+
+    font-size: 15px;
+  }
+
+
+  .winter-title {
+    font-size: 48px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .winter-description {
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 16px;
+  }
+
+
+  .winter-button {
+    padding: 14px 23px;
+
+    font-size: 15px;
+  }
+
+
+  .winter-badge {
+    display: none;
+  }
+
+
+  .winter-sign {
+    display: none;
+  }
+
+
+  .winter-nav {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .winter-prev {
+    left: 12px;
+  }
+
+
+  .winter-next {
+    right: 12px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .winter-swiper,
+  .winter-slide {
+    height: 600px;
+  }
+
+
+  .winter-title {
+    font-size: 40px;
+  }
+
+
+  .winter-small-title {
+    font-size: 14px;
+  }
+
+
+  .winter-description {
+    font-size: 15px;
+
+    line-height: 1.5;
+  }
+
+
+  .winter-content {
+    margin-bottom: 70px;
+  }
+
+}
