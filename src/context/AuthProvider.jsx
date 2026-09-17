@@ -36,7 +36,16 @@ const AuthProvider = ({children}) => {
     }
     const sendPasswordResetEmailFunc = (email) =>{
         setLoading(true)
-        return sendPasswordResetEmail(auth, email)
+        const actionCodeSettings = {
+        url: `${window.location.origin}/login`,
+        handleCodeInApp: false,
+    };
+
+    return sendPasswordResetEmail(
+        auth,
+        email,
+        actionCodeSettings
+    );
     }
 
     const authInfo = {

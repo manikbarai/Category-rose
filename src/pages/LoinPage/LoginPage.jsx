@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 
 import "./LoginPage.css";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { useLocation, useNavigate } from "react-router";
 import { RiseLoader } from "react-spinners";
@@ -19,11 +19,12 @@ import toast from "react-hot-toast";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
 
   const {
     signInWithEmailAndPasswordFunc,
     signInWithPopupFunc,
-    sendPasswordResetEmailFunc,
+
     user,
     setUser,
     setLoading,
@@ -33,8 +34,6 @@ const LoginPage = () => {
   const location = useLocation();
   const from = location.state || "/";
   const navigate = useNavigate();
-
-  const emailRef = useRef(null);
 
   useEffect(() => {
     if (!loading && user) {
@@ -66,9 +65,9 @@ const LoginPage = () => {
         console.log(e);
         toast.error(e.message);
       })
-       .finally(() => {
-      setLoading(false);
-    });
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   const handleGoogleSignin = () => {
@@ -85,27 +84,8 @@ const LoginPage = () => {
         toast.error(e.message);
       })
       .finally(() => {
-      setLoading(false);
-    });
-  };
-
-  const handleForgetPassword = () => {
-    const email = emailRef.current?.value?.trim();
-    if (!email) {
-      toast.error("Please enter your email address first.");
-      return;
-    }
-    sendPasswordResetEmailFunc(email)
-      .then(() => {
-        toast.success("Password reset link sent! Please check your inbox.");
-      })
-      .catch((e) => {
-        console.log(e);
-        toast.error(e.message);
-      })
-      .finally(() => {
-      setLoading(false);
-    });
+        setLoading(false);
+      });
   };
 
   return (
@@ -395,7 +375,8 @@ const LoginPage = () => {
                   id="email"
                   name="email"
                   type="email"
-                  ref={emailRef}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
                   autoComplete="email"
                   required
@@ -430,9 +411,9 @@ const LoginPage = () => {
                 </button>
               </div>
               <div className="forgot-password-wrapper">
-                <button type="button" onClick={handleForgetPassword}>
+                <Link to="/forgot-password" state={{ email: email.trim() }}>
                   Forgot password?
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -462,8 +443,10 @@ const LoginPage = () => {
           </div>
 
           {/* Google Sign In */}
-          <button type="button" className="google-login-button" 
-          onClick={handleGoogleSignin}
+          <button
+            type="button"
+            className="google-login-button"
+            onClick={handleGoogleSignin}
             disabled={loading}
           >
             <span className="google-icon">

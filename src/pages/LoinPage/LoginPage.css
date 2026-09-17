@@ -1685,7 +1685,7 @@
   justify-content: flex-end;
 
   margin-top: 9px;
-   margin-bottom: -7px;
+   margin-bottom: -27px;
 }
 
 .forgot-password-wrapper button {
@@ -1713,7 +1713,28 @@
     color 0.25s ease,
     transform 0.25s ease;
 }
+.forgot-password-wrapper a {
+  display: inline-flex;
+  align-items: center;
 
+  padding: 0;
+  margin: 0;
+
+  color: #6685d1;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
 
 .forgot-password-wrapper a:hover {
   color: #4f70c2;

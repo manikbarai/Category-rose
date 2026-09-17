@@ -7,41 +7,51 @@ import LoginPage from "../pages/LoinPage/LoginPage";
 import SignupPage from "../pages/SignupPage/SignupPage";
 import Profile from "../pages/ProfilePage/Profile";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
+import ForgotPasswordPage from "../pages/ForgotPasswordPage/FogetPasswordPage";
+
 
 export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <MainLayout/>,
-        children:[
-            {
-                index: true,
-                element: <Homepage/>,
-            },
-            {
-                path: '/about-us',
-                element: <AboutUs/>,
-            },
-            {
-                path: '/profile',
-                element: (<PrivateRoute>
-                    <Profile/>
-                </PrivateRoute>),
-            },
-            {
-                path: "/service/:serviceId",
-                element: (<PrivateRoute>
-                    <ServiceDetails/>
-                </PrivateRoute>),
-            },
-            
-            {
-                path: '/login',
-                element: <LoginPage/>,
-            },
-            {
-                path: '/signup',
-                element: <SignupPage/>,
-            },
-        ]
-    }
-])
+  {
+    path: "/",
+    element: <MainLayout />,
+    children: [
+      {
+        index: true,
+        element: <Homepage />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs />,
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/service/:serviceId",
+        element: (
+          <PrivateRoute>
+            <ServiceDetails />
+          </PrivateRoute>
+        ),
+      },
+
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
+      {
+        path: "/signup",
+        element: <SignupPage />,
+      },
+      {
+        path: "/forgot-password",
+        element: <ForgotPasswordPage />,
+      },
+    ],
+  },
+]);
