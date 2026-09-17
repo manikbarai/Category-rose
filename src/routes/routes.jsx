@@ -1,13 +1,14 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "../layout/MainLayout";
 import Homepage from "../pages/Homepage";
-import AboutUs from "../pages/AboutUs";
+
 import PrivateRoute from "../privateRoute/PrivateRoute";
 import LoginPage from "../pages/LoinPage/LoginPage";
 import SignupPage from "../pages/SignupPage/SignupPage";
 import Profile from "../pages/ProfilePage/Profile";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import ForgotPasswordPage from "../pages/ForgotPasswordPage/FogetPasswordPage";
+import Services from "../pages/Services/Services";
 
 
 export const router = createBrowserRouter([
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <AboutUs />,
+        element: <Services/>,
       },
       {
         path: "/profile",
