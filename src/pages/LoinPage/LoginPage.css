@@ -29,7 +29,7 @@
 ========================================================= */
 
 .premium-visual {
-  min-height: 780px;
+  min-height: 800px;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -1501,10 +1501,11 @@
 ========================================================= */
 
 .premium-form-side {
-   min-height: 780px;
+   min-height: 800px;
   height: 100%;
 
   position: relative;
+  padding: 20px 0px;
 
   display: flex;
 
