@@ -1,0 +1,959 @@
+/* =====================================================
+   EXTRA SECTION
+   WinterPaws - Winter Pet Care
+===================================================== */
+
+.extra-section {
+  position: relative;
+  overflow: hidden;
+
+  padding: 75px 20px 90px;
+
+  background:
+    radial-gradient(
+      circle at 5% 10%,
+      rgba(159, 98, 242, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 95% 45%,
+      rgba(99, 46, 227, 0.06),
+      transparent 28%
+    ),
+    #f1f5f9;
+}
+
+
+/* Main Container */
+
+.extra-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1550px, 100%);
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.extra-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 32px;
+}
+
+
+.extra-heading-content {
+  max-width: 720px;
+}
+
+
+.extra-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 9px;
+
+  color: #9271c8;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.extra-heading h2 {
+  margin: 0;
+
+  color: #1e293b;
+
+  font-size: clamp(30px, 4vw, 46px);
+
+  line-height: 1.15;
+
+  font-weight: 800;
+}
+
+
+.extra-heading h2 span {
+  color: #7042d7;
+}
+
+
+.extra-heading p {
+  max-width: 620px;
+
+  margin: 12px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+.heading-decoration {
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #f3edff,
+    #e8e1ff
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+
+  font-size: 27px;
+
+  box-shadow:
+    0 12px 30px rgba(99, 46, 227, 0.08);
+}
+
+
+.vet-decoration {
+  background: linear-gradient(
+    135deg,
+    #eeeaff,
+    #e7f1ff
+  );
+}
+
+
+/* =====================================================
+   CARE TIPS
+===================================================== */
+
+.care-section {
+  margin-bottom: 90px;
+}
+
+
+.care-tips-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+/* Card */
+
+.care-tip-card {
+  position: relative;
+
+  min-height: 225px;
+
+  padding: 28px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 12px 35px rgba(15, 23, 42, 0.055);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.care-tip-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 160px;
+  height: 160px;
+
+  right: -75px;
+  bottom: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(112, 66, 215, 0.045);
+
+  transition: transform 0.4s ease;
+}
+
+
+.care-tip-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(159, 98, 242, 0.2);
+
+  box-shadow:
+    0 22px 45px rgba(99, 46, 227, 0.1);
+}
+
+
+.care-tip-card:hover::before {
+  transform: scale(1.4);
+}
+
+
+/* Number */
+
+.tip-number {
+  position: absolute;
+
+  top: 18px;
+  right: 22px;
+
+  color: #e9e2f7;
+
+  font-size: 28px;
+
+  font-weight: 800;
+}
+
+
+/* Icon */
+
+.tip-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #f5f0ff,
+    #eee8ff
+  );
+
+  font-size: 25px;
+
+  box-shadow:
+    0 8px 20px rgba(99, 46, 227, 0.07);
+}
+
+
+/* Content */
+
+.tip-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+.tip-content h3 {
+  margin: 0 0 9px;
+
+  color: #334155;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+.tip-content p {
+  max-width: 310px;
+
+  margin: 0;
+
+  color: #7b8798;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* Arrow */
+
+.tip-arrow {
+  position: absolute;
+
+  right: 24px;
+  bottom: 22px;
+
+  color: #8f6aca;
+
+  font-size: 18px;
+
+  opacity: 0;
+
+  transform: translateX(-6px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.care-tip-card:hover .tip-arrow {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+
+/* =====================================================
+   EXPERT VETS
+===================================================== */
+
+.expert-section {
+  margin-bottom: 55px;
+}
+
+
+.expert-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+/* Expert Card */
+
+.expert-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.expert-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 55px rgba(99, 46, 227, 0.12);
+}
+
+
+/* Top */
+
+.expert-card-top {
+  position: relative;
+
+  height: 100px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.9),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #e9e0ff,
+      #f4f0ff,
+      #e8f1ff
+    );
+}
+
+
+.mini-snow {
+  position: absolute;
+
+  top: 16px;
+  left: 18px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 20px;
+}
+
+
+.mini-paw {
+  position: absolute;
+
+  right: 18px;
+  top: 20px;
+
+  color: rgba(112, 66, 215, 0.13);
+
+  font-size: 32px;
+
+  transform: rotate(20deg);
+}
+
+
+/* =====================================================
+   VET AVATAR
+===================================================== */
+
+.vet-avatar-wrapper {
+  position: relative;
+
+  width: 105px;
+  height: 105px;
+
+  margin: -52px auto 0;
+}
+
+
+.vet-avatar {
+  width: 105px;
+  height: 105px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 5px solid white;
+
+  background: linear-gradient(
+    135deg,
+    #f0eaff,
+    #e6efff
+  );
+
+  font-size: 52px;
+
+  box-shadow:
+    0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+
+.vet-check {
+  position: absolute;
+
+  right: 2px;
+  bottom: 5px;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  color: white;
+
+  border: 3px solid white;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   VET CONTENT
+===================================================== */
+
+.vet-content {
+  padding: 18px 22px 20px;
+
+  text-align: center;
+}
+
+
+.vet-specialty {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  margin-bottom: 9px;
+
+  border-radius: 50px;
+
+  background: #f3eeff;
+
+  color: #7650bd;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.4px;
+}
+
+
+.vet-content h3 {
+  margin: 0;
+
+  color: #334155;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+.vet-experience {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 7px;
+
+  color: #8b96a6;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+.star {
+  color: #f59e0b;
+
+  font-size: 12px;
+}
+
+
+.vet-content p {
+  margin: 13px 0 0;
+
+  color: #7b8798;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   VET FOOTER
+===================================================== */
+
+.vet-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 18px;
+
+  border-top: 1px solid #f0f2f6;
+
+  color: #9aa4b2;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+.vet-arrow {
+  color: #8c65cf;
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.expert-card:hover .vet-arrow {
+  transform: translateX(5px);
+}
+
+
+/* =====================================================
+   BOTTOM CTA
+===================================================== */
+
+.extra-cta {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 24px 30px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      105deg,
+      #eee7ff,
+      #f7f4ff 55%,
+      #edf3ff
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 12px 35px rgba(99, 46, 227, 0.06);
+}
+
+
+.extra-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 200px;
+  height: 200px;
+
+  right: -90px;
+  top: -110px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.45);
+}
+
+
+.cta-paw {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  font-size: 25px;
+}
+
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+.cta-content span {
+  color: #9574ca;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+.cta-content h3 {
+  margin: 4px 0 0;
+
+  color: #334155;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+
+.cta-snow {
+  position: absolute;
+
+  right: 35px;
+
+  color: rgba(112, 66, 215, 0.12);
+
+  font-size: 42px;
+}
+
+
+/* =====================================================
+   DECORATIVE SNOW
+===================================================== */
+
+.extra-snow {
+  position: absolute;
+
+  z-index: 1;
+
+  color: white;
+
+  opacity: 0.75;
+
+  animation: extraSnowFloat 5s ease-in-out infinite;
+}
+
+
+.extra-snow-1 {
+  top: 12%;
+  left: 5%;
+
+  font-size: 25px;
+}
+
+
+.extra-snow-2 {
+  top: 35%;
+  right: 5%;
+
+  font-size: 18px;
+
+  animation-delay: 1s;
+}
+
+
+.extra-snow-3 {
+  bottom: 22%;
+  left: 9%;
+
+  font-size: 20px;
+
+  animation-delay: 2s;
+}
+
+
+.extra-snow-4 {
+  bottom: 8%;
+  right: 12%;
+
+  font-size: 25px;
+
+  animation-delay: 3s;
+}
+
+
+@keyframes extraSnowFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-13px) rotate(12deg);
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .care-tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .extra-section {
+    padding: 55px 15px 65px;
+  }
+
+
+  .extra-heading {
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 24px;
+  }
+
+
+  .extra-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 1.3px;
+  }
+
+
+  .extra-heading h2 {
+    font-size: 28px;
+  }
+
+
+  .extra-heading p {
+    margin-top: 9px;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+  }
+
+
+  .heading-decoration {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 14px;
+
+    font-size: 20px;
+  }
+
+
+  /* Care Tips */
+
+  .care-section {
+    margin-bottom: 65px;
+  }
+
+
+  .care-tips-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+
+  .care-tip-card {
+    min-height: 185px;
+
+    padding: 23px;
+
+    border-radius: 20px;
+  }
+
+
+  .tip-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 15px;
+
+    border-radius: 14px;
+
+    font-size: 22px;
+  }
+
+
+  .tip-content h3 {
+    font-size: 16px;
+  }
+
+
+  .tip-content p {
+    font-size: 11px;
+  }
+
+
+  /* Expert */
+
+  .expert-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+
+  .expert-card {
+    border-radius: 21px;
+  }
+
+
+  .expert-card-top {
+    height: 82px;
+  }
+
+
+  .vet-avatar-wrapper,
+  .vet-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+
+  .vet-avatar {
+    font-size: 48px;
+  }
+
+
+  .vet-content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+
+  /* CTA */
+
+  .extra-cta {
+    padding: 20px;
+
+    gap: 13px;
+
+    border-radius: 20px;
+  }
+
+
+  .cta-paw {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 13px;
+
+    font-size: 20px;
+  }
+
+
+  .cta-content h3 {
+    font-size: 14px;
+
+    line-height: 1.45;
+  }
+
+
+  .cta-snow {
+    right: 15px;
+
+    font-size: 28px;
+  }
+
+}

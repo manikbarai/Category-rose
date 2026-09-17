@@ -2,10 +2,11 @@ import { createBrowserRouter } from "react-router";
 import MainLayout from "../layout/MainLayout";
 import Homepage from "../pages/Homepage";
 import AboutUs from "../pages/AboutUs";
-import Profile from "../pages/Profile";
 import PrivateRoute from "../privateRoute/PrivateRoute";
 import LoginPage from "../pages/LoinPage/LoginPage";
 import SignupPage from "../pages/SignupPage/SignupPage";
+import Profile from "../pages/ProfilePage/Profile";
+import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 
 export const router = createBrowserRouter([
     {
@@ -22,8 +23,17 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/profile',
-                element: (<PrivateRoute><Profile/></PrivateRoute>),
+                element: (<PrivateRoute>
+                    <Profile/>
+                </PrivateRoute>),
             },
+            {
+                path: "/service/:serviceId",
+                element: (<PrivateRoute>
+                    <ServiceDetails/>
+                </PrivateRoute>),
+            },
+            
             {
                 path: '/login',
                 element: <LoginPage/>,

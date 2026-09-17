@@ -1,8 +1,11 @@
 import React from "react";
 import { FaStar, FaArrowRight } from "react-icons/fa";
 import "./ServiceCard.css";
+import { useNavigate } from "react-router";
+
 
 const ServiceCard = ({ service }) => {
+  const navigate = useNavigate()
   const {
     serviceName,
     rating,
@@ -48,7 +51,9 @@ const ServiceCard = ({ service }) => {
             </p>
           </div>
 
-          <button className="details-btn">
+          <button 
+          onClick={() => navigate(`/service/${service.serviceId}`)}
+          className="details-btn">
             View Details
             <FaArrowRight className="arrow-icon" />
           </button>
