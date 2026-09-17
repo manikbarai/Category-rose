@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import HeroSlider from './HeroSlider/HeroSlider';
 import ServiceCard from '../components/card/ServiceCard';
 import ExtraSection from '../components/ExtraSection/ExtraSection';
+import WinterWellness from '../components/WinterWellness/WinterWellness';
 
 const Homepage = () => {
     const [services, setServices] = useState([]);
@@ -47,6 +48,7 @@ const Homepage = () => {
 
       </div>
     </section>
+    <WinterWellness/>
     <ExtraSection/>
         </div>
     );

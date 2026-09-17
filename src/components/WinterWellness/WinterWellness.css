@@ -1,0 +1,642 @@
+/* ================================
+   WINTER WELLNESS SECTION
+================================ */
+
+.winter-wellness {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 110px 20px;
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(125, 151, 235, 0.15),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(155, 196, 255, 0.13),
+      transparent 30%
+    ),
+    linear-gradient(145deg, #07152e 0%, #0d2346 48%, #101f3d 100%);
+  isolation: isolate;
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+.wellness-container {
+  position: relative;
+  z-index: 5;
+  width: min(1400px, 100%);
+  margin: 0 auto;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.wellness-header {
+  max-width: 780px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.wellness-badge {
+  width: fit-content;
+  margin: 0 auto 22px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(180, 205, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  color: #b9ccff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.wellness-badge svg {
+  font-size: 12px;
+  animation: badgeSpin 4s linear infinite;
+}
+
+.wellness-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.08;
+  font-weight: 850;
+  letter-spacing: -2.5px;
+}
+
+.wellness-header h2 span {
+  background: linear-gradient(
+    90deg,
+    #9db8ff,
+    #d7e3ff,
+    #a9c4ff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.wellness-header p {
+  max-width: 650px;
+  margin: 22px auto 0;
+  color: rgba(224, 234, 255, 0.7);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.wellness-content {
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+
+/* ================================
+   FEATURE CARD
+================================ */
+
+.wellness-feature {
+  position: relative;
+  min-height: 570px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  border: 1px solid rgba(184, 209, 255, 0.18);
+  border-radius: 32px;
+  background:
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(161, 190, 255, 0.22),
+      transparent 28%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(108, 143, 218, 0.23),
+      rgba(255, 255, 255, 0.045)
+    );
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.wellness-feature::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -90px;
+  top: 100px;
+  border-radius: 50%;
+  background: rgba(154, 188, 255, 0.12);
+  filter: blur(10px);
+}
+
+.feature-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feature-label {
+  color: rgba(216, 228, 255, 0.6);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #c4d5ff;
+  font-size: 21px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: pawFloat 4s ease-in-out infinite;
+}
+
+.feature-content {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  margin-bottom: 50px;
+}
+
+.feature-small-title {
+  color: #9fb8ff;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 2px;
+}
+
+.feature-content h3 {
+  margin: 12px 0 18px;
+  color: white;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.05;
+  font-weight: 850;
+  letter-spacing: -2px;
+}
+
+.feature-content h3 span {
+  color: #a9c2ff;
+}
+
+.feature-content p {
+  max-width: 440px;
+  margin: 0;
+  color: rgba(226, 235, 255, 0.67);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.feature-points {
+  display: flex;
+  gap: 25px;
+  margin-top: 27px;
+}
+
+.feature-points div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(235, 241, 255, 0.8);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.feature-points svg {
+  color: #a9c2ff;
+  font-size: 12px;
+}
+
+.feature-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  color: rgba(217, 228, 255, 0.48);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.feature-arrow {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #c6d6ff;
+  transition: 0.35s ease;
+}
+
+.wellness-feature:hover .feature-arrow {
+  transform: translateX(5px);
+  background: rgba(176, 202, 255, 0.18);
+}
+
+
+/* ================================
+   WELLNESS GRID
+================================ */
+
+.wellness-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+
+/* ================================
+   WELLNESS CARD
+================================ */
+
+.wellness-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 273px;
+  padding: 27px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(185, 208, 255, 0.14);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.wellness-card::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: -40px;
+  bottom: -40px;
+  border-radius: 50%;
+  background: rgba(159, 190, 255, 0.09);
+  filter: blur(4px);
+  transition: 0.4s ease;
+}
+
+.wellness-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(179, 204, 255, 0.3);
+  background: rgba(255, 255, 255, 0.085);
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.2),
+    0 0 35px rgba(121, 157, 235, 0.08);
+}
+
+.wellness-card:hover::after {
+  transform: scale(1.5);
+}
+
+.wellness-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wellness-card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: linear-gradient(
+    145deg,
+    rgba(168, 195, 255, 0.17),
+    rgba(255, 255, 255, 0.05)
+  );
+  border: 1px solid rgba(188, 211, 255, 0.15);
+  color: #b7ccff;
+  font-size: 18px;
+  transition: 0.4s ease;
+}
+
+.wellness-card:hover .wellness-card-icon {
+  transform: rotate(-8deg) scale(1.08);
+  background: rgba(173, 201, 255, 0.18);
+}
+
+.wellness-number {
+  color: rgba(205, 220, 255, 0.22);
+  font-size: 30px;
+  font-weight: 850;
+  letter-spacing: -1px;
+}
+
+.wellness-card-body {
+  margin-top: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.wellness-card-body h3 {
+  margin: 0 0 10px;
+  color: #f4f7ff;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.wellness-card-body p {
+  margin: 0;
+  color: rgba(220, 231, 255, 0.6);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.wellness-card-line {
+  width: 35px;
+  height: 2px;
+  margin-top: 18px;
+  border-radius: 10px;
+  background: #9db8ff;
+  transition: width 0.4s ease;
+}
+
+.wellness-card:hover .wellness-card-line {
+  width: 75px;
+}
+
+
+/* ================================
+   BOTTOM QUOTE
+================================ */
+
+.wellness-bottom {
+  width: fit-content;
+  max-width: 700px;
+  margin: 60px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.bottom-paw {
+  color: #a9c2ff;
+  font-size: 14px;
+}
+
+.wellness-bottom p {
+  margin: 0;
+  color: rgba(225, 234, 255, 0.65);
+  font-size: 12px;
+  font-style: italic;
+}
+
+.wellness-bottom span {
+  color: rgba(187, 207, 255, 0.4);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+
+/* ================================
+   BACKGROUND DECORATIONS
+================================ */
+
+.wellness-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.wellness-glow-one {
+  width: 300px;
+  height: 300px;
+  top: 100px;
+  left: -180px;
+  background: rgba(101, 140, 230, 0.14);
+}
+
+.wellness-glow-two {
+  width: 250px;
+  height: 250px;
+  right: -130px;
+  bottom: 100px;
+  background: rgba(164, 190, 255, 0.1);
+}
+
+.wellness-snow {
+  position: absolute;
+  color: rgba(205, 222, 255, 0.16);
+  pointer-events: none;
+  font-size: 20px;
+}
+
+.snow-one {
+  top: 12%;
+  left: 8%;
+  animation: snowFloat 6s ease-in-out infinite;
+}
+
+.snow-two {
+  top: 30%;
+  right: 8%;
+  font-size: 14px;
+  animation: snowFloat 5s ease-in-out infinite reverse;
+}
+
+.snow-three {
+  bottom: 20%;
+  left: 5%;
+  font-size: 13px;
+  animation: snowFloat 7s ease-in-out infinite;
+}
+
+.snow-four {
+  bottom: 10%;
+  right: 12%;
+  font-size: 17px;
+  animation: snowFloat 6s ease-in-out infinite reverse;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes pawFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes snowFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(15deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes badgeSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1050px) {
+  .wellness-content {
+    grid-template-columns: 1fr;
+  }
+
+  .wellness-feature {
+    min-height: 480px;
+  }
+
+  .wellness-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 650px) {
+  .winter-wellness {
+    padding: 75px 16px;
+  }
+
+  .wellness-header {
+    margin-bottom: 40px;
+  }
+
+  .wellness-header h2 {
+    font-size: 38px;
+    letter-spacing: -1.7px;
+  }
+
+  .wellness-header p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .wellness-feature {
+    min-height: 460px;
+    padding: 24px;
+    border-radius: 26px;
+  }
+
+  .feature-content h3 {
+    font-size: 38px;
+  }
+
+  .feature-points {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .wellness-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .wellness-card {
+    min-height: 230px;
+    padding: 23px;
+    border-radius: 24px;
+  }
+
+  .wellness-bottom {
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 380px) {
+  .winter-wellness {
+    padding: 60px 12px;
+  }
+
+  .wellness-header h2 {
+    font-size: 32px;
+  }
+
+  .wellness-feature {
+    min-height: 440px;
+    padding: 20px;
+  }
+
+  .feature-content h3 {
+    font-size: 34px;
+  }
+
+  .feature-content p {
+    font-size: 12px;
+  }
+}

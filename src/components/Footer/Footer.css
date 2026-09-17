@@ -4,16 +4,14 @@
 
 .site-footer {
   position: relative;
-  margin-top: 70px;
-
+  margin-top: 0;
   background:
     linear-gradient(
       135deg,
-      #17252d 0%,
-      #1d3039 55%,
+      #102541 0%,
+      #172f3a 50%,
       #233b45 100%
     );
-
   color: #ffffff;
   overflow: hidden;
 }
