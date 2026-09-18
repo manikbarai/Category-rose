@@ -2,7 +2,7 @@
 
 ## 🌐 Live URL
 
-**Live Website:** `YOUR_LIVE_URL_HERE`
+## Live Website: https://rosesess.netlify.app/
 
 ---
 
@@ -77,31 +77,29 @@ The website provides winter pet-care services with a cozy and user-friendly inte
 
 Used for smooth animations and interactive UI effects.
 
-* [React Spring](https://www.react-spring.dev/docs/components/parallax)
 
 ### 2. React Hot Toast
 
 Used for displaying success, error, and authentication notifications.
 
-* [React Hot Toast](https://www.npmjs.com/package/react-hot-toast)
+
 
 ### 3. Swiper
 
 Used to create the responsive and interactive hero slider.
 
-* [Swiper](https://www.npmjs.com/package/swiper)
+
 
 ### 4. React Router
 
 Used for client-side routing and navigation between different pages.
 
-* [React Router](https://www.npmjs.com/package/react-router)
+
 
 ### 5. React Icons
 
 Used for modern icons throughout the website.
 
-* [React Icons](https://www.npmjs.com/package/react-icons)
 
 ### 6. Firebase
 
@@ -123,35 +121,8 @@ Authentication features implemented:
 
 * Profile Update
 
-* [Firebase](https://firebase.google.com/)
 
 ---
-
-## 🚀 Run the Project Locally
-
-Clone the repository:
-
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-```
-
-Go to the project directory:
-
-```bash
-cd WarmPaws
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run the development server:
-
-```bash
-npm run dev
-```
 
 ---
 
