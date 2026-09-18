@@ -18,9 +18,7 @@
     #f1f5f9;
 }
 
-/* =========================
-   Container
-========================= */
+
 
 .profile-container {
   width: min(1200px, 100%);
@@ -29,9 +27,6 @@
   z-index: 2;
 }
 
-/* =========================
-   Heading
-========================= */
 
 .profile-heading {
   display: flex;
@@ -86,9 +81,7 @@
   font-size: 15px;
 }
 
-/* =========================
-   Main Card
-========================= */
+
 
 .profile-card {
   display: grid;
@@ -111,9 +104,7 @@
   backdrop-filter: blur(18px);
 }
 
-/* =========================
-   Profile Visual
-========================= */
+
 
 .profile-visual {
   position: relative;
@@ -175,9 +166,7 @@
   left: -80px;
 }
 
-/* =========================
-   Avatar
-========================= */
+
 
 .avatar-wrapper {
   position: relative;
@@ -246,9 +235,7 @@
   font-weight: 800;
 }
 
-/* =========================
-   Welcome Text
-========================= */
+
 
 .profile-welcome {
   text-align: center;
@@ -298,9 +285,7 @@
   line-height: 1.7;
 }
 
-/* =========================
-   Paw Decorations
-========================= */
+
 
 .paw-decoration {
   position: absolute;
@@ -324,9 +309,7 @@
   transform: rotate(25deg);
 }
 
-/* =========================
-   Details
-========================= */
+
 
 .profile-details {
   padding: 55px 60px;
@@ -376,9 +359,7 @@
   font-size: 24px;
 }
 
-/* =========================
-   Information Items
-========================= */
+
 
 .info-item {
   display: flex;
@@ -443,9 +424,7 @@
   text-overflow: ellipsis;
 }
 
-/* =========================
-   Status
-========================= */
+
 
 .status {
   display: flex;
@@ -490,9 +469,6 @@
   position: relative;
 }
 
-/* =========================
-   Update Button
-========================= */
 
 .update-profile-btn {
   width: 100%;
@@ -554,9 +530,7 @@
   font-size: 11px;
 }
 
-/* =========================
-   Bottom Features
-========================= */
+
 
 .profile-features {
   display: grid;
@@ -628,9 +602,7 @@
   font-size: 11px;
 }
 
-/* =========================
-   Snow
-========================= */
+
 
 .snow {
   position: absolute;
@@ -683,9 +655,7 @@
   }
 }
 
-/* =========================
-   Tablet
-========================= */
+
 
 @media (max-width: 900px) {
   .profile-card {
@@ -705,9 +675,7 @@
   }
 }
 
-/* =========================
-   Mobile
-========================= */
+
 
 @media (max-width: 600px) {
   .profile-page {
@@ -810,9 +778,7 @@
   }
 }
 
-/* =================================
-   UPDATE PROFILE
-================================= */
+
 
 .update-profile-card {
   width: 100%;
@@ -905,9 +871,6 @@
 }
 
 
-/* =================================
-   Profile Preview
-================================= */
 
 .profile-preview {
   display: flex;
@@ -977,9 +940,6 @@
 }
 
 
-/* =================================
-   Form
-================================= */
 
 .form-group {
   margin-bottom: 22px;
@@ -1059,9 +1019,6 @@
 }
 
 
-/* =================================
-   Action Buttons
-================================= */
 
 .update-actions {
   display: flex;
@@ -1167,9 +1124,6 @@
 }
 
 
-/* =================================
-   Mobile
-================================= */
 
 @media (max-width: 600px) {
 

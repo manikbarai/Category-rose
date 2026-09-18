@@ -1,6 +1,4 @@
-/* =========================================================
-   WINTERPAWS — PREMIUM SERVICES PAGE
-========================================================= */
+/* WINTER-PAWS — PREMIUM SERVICES PAGE */
 
 .services-page {
   width: 100%;
@@ -10,9 +8,7 @@
 }
 
 
-/* =========================================================
-   HERO
-========================================================= */
+
 
 .services-hero {
   position: relative;
@@ -45,9 +41,6 @@
 }
 
 
-/* =========================================================
-   HERO CONTAINER
-========================================================= */
 
 .services-hero-container {
   position: relative;
@@ -67,9 +60,7 @@
 }
 
 
-/* =========================================================
-   HERO CONTENT
-========================================================= */
+
 
 .services-hero-content {
   padding: 80px 0;
@@ -90,9 +81,7 @@
 }
 
 
-/* =========================================================
-   BADGE
-========================================================= */
+
 
 .services-badge {
   width: fit-content;
@@ -141,9 +130,6 @@
 }
 
 
-/* =========================================================
-   HERO HEADING
-========================================================= */
 
 .services-hero h1 {
   margin: 24px 0 20px;
@@ -177,9 +163,6 @@
 }
 
 
-/* =========================================================
-   HERO DESCRIPTION
-========================================================= */
 
 .services-hero-content > p {
   max-width: 610px;
@@ -193,10 +176,6 @@
   line-height: 1.85;
 }
 
-
-/* =========================================================
-   HERO ACTIONS
-========================================================= */
 
 .services-hero-actions {
   display: flex;
@@ -298,9 +277,6 @@
 }
 
 
-/* =========================================================
-   TRUST
-========================================================= */
 
 .services-trust {
   display: flex;
@@ -354,9 +330,7 @@
 }
 
 
-/* =========================================================
-   HERO VISUAL
-========================================================= */
+
 
 .services-hero-visual {
   position: relative;
@@ -371,9 +345,7 @@
 }
 
 
-/* =========================================================
-   ORBITS
-========================================================= */
+
 
 .hero-orbit {
   position: absolute;
@@ -424,9 +396,7 @@
 }
 
 
-/* =========================================================
-   HERO PET CARD
-========================================================= */
+
 
 .hero-pet-card {
   position: relative;
@@ -471,9 +441,7 @@
 }
 
 
-/* =========================================================
-   HERO IMAGE
-========================================================= */
+
 
 .hero-service-image {
   position: relative;
@@ -507,9 +475,6 @@
 }
 
 
-/* =========================================================
-   IMAGE OVERLAY
-========================================================= */
 
 .hero-image-overlay {
   position: absolute;
@@ -532,10 +497,6 @@
   pointer-events: none;
 }
 
-
-/* =========================================================
-   FLOATING CARDS
-========================================================= */
 
 .hero-floating-card {
   position: absolute;
@@ -623,9 +584,6 @@
 }
 
 
-/* =========================================================
-   HERO DECORATIONS
-========================================================= */
 
 .services-glow {
   position: absolute;
@@ -772,9 +730,6 @@
 }
 
 
-/* =========================================================
-   STATS
-========================================================= */
 
 .services-stats {
   position: relative;
@@ -812,11 +767,6 @@
   gap: 55px;
 }
 
-
-/* =========================================================
-   STAT ITEM
-========================================================= */
-
 .service-stat {
   display: flex;
 
@@ -838,11 +788,6 @@
 
   background: rgba(235, 243, 254, 0.65);
 }
-
-
-/* =========================================================
-   STAT ICON — FIXED PREMIUM COLOR
-========================================================= */
 
 .stat-icon {
   width: 45px;
@@ -894,11 +839,6 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
-
-/* =========================================================
-   STAT TEXT
-========================================================= */
-
 .service-stat strong {
   display: block;
 
@@ -925,11 +865,6 @@
   font-weight: 600;
 }
 
-
-/* =========================================================
-   STAT DIVIDER
-========================================================= */
-
 .stat-line {
   width: 1px;
   height: 35px;
@@ -944,9 +879,6 @@
 }
 
 
-/* =========================================================
-   ALL SERVICES SECTION
-========================================================= */
 
 .all-services-section {
   padding: 100px 20px 115px;
@@ -967,9 +899,6 @@
 }
 
 
-/* =========================================================
-   SECTION HEADING
-========================================================= */
 
 .services-section-heading {
   display: flex;
@@ -986,9 +915,6 @@
 .services-section-heading > div:first-child {
   max-width: 820px;
 }
-
-
-/* Small title */
 
 .section-mini-title {
   display: flex;
@@ -1010,9 +936,6 @@
   font-size: 10px;
 }
 
-
-/* Heading */
-
 .services-section-heading h2 {
   margin: 13px 0 15px;
 
@@ -1033,9 +956,6 @@
   color: #6685d1;
 }
 
-
-/* Description */
-
 .services-section-heading p {
   max-width: 680px;
 
@@ -1049,9 +969,6 @@
 }
 
 
-/* =========================================================
-   SERVICE COUNT
-========================================================= */
 
 .service-count {
   flex-shrink: 0;
@@ -1113,9 +1030,6 @@
 }
 
 
-/* =========================================================
-   CONTROLS
-========================================================= */
 
 .services-controls {
   margin-bottom: 42px;
@@ -1134,11 +1048,6 @@
 
   backdrop-filter: blur(12px);
 }
-
-
-/* =========================================================
-   SEARCH
-========================================================= */
 
 .service-search {
   width: min(570px, 100%);
@@ -1204,9 +1113,6 @@
 }
 
 
-/* =========================================================
-   CLEAR SEARCH
-========================================================= */
 
 .clear-search {
   width: 28px;
@@ -1238,9 +1144,7 @@
 }
 
 
-/* =========================================================
-   CATEGORY FILTER
-========================================================= */
+
 
 .service-categories {
   display: flex;
@@ -1305,9 +1209,6 @@
 }
 
 
-/* =========================================================
-   SERVICE GRID
-========================================================= */
 
 .services-grid {
   display: grid;
@@ -1315,14 +1216,156 @@
   grid-template-columns:
     repeat(4, minmax(0, 1fr));
 
-  gap: 24px;
+  gap: 22px;
 }
+
+
+
 
 .service-card-wrapper {
   min-width: 0;
 
+  height: 370px;
+
   animation:
     serviceCardReveal 0.6s ease both;
+}
+
+.service-card-wrapper .service-card {
+  position: relative;
+
+  width: 100%;
+
+  height: 370px !important;
+
+  max-height: 370px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+
+
+.service-card-wrapper .service-image-wrapper {
+  position: relative;
+
+  width: calc(100% - 16px) !important;
+
+  height: 220px !important;
+
+  min-height: 220px !important;
+
+  max-height: 220px !important;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 8px auto 0;
+
+  padding: 0;
+
+  border-radius: 18px;
+}
+
+
+/* Actual image */
+
+.service-card-wrapper .service-image {
+  position: absolute;
+
+  inset: 0;
+
+  display: block;
+
+  width: 100% !important;
+
+  height: 100% !important;
+
+  min-width: 100%;
+
+  min-height: 100%;
+
+  max-width: none;
+
+  object-fit: cover;
+
+  object-position: center center;
+
+  margin: 0;
+
+  padding: 0;
+
+  transform: scale(1);
+
+  transform-origin: center center;
+
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+/* Very little hover zoom */
+
+.service-card-wrapper:hover .service-image {
+  transform: scale(1.015);
+}
+
+
+
+.service-card-wrapper .service-card-content {
+  position: relative;
+
+  flex: 1;
+
+  min-height: 0;
+
+  padding: 9px 17px 5px !important;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* Bottom content */
+
+.service-card-wrapper .service-card-bottom {
+  margin-top: auto !important;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+
+
+@keyframes serviceCardReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(22px)
+      scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
 }
 
 .service-card-wrapper:nth-child(2) {
@@ -1345,28 +1388,8 @@
   animation-delay: 0.30s;
 }
 
-@keyframes serviceCardReveal {
-  from {
-    opacity: 0;
-
-    transform:
-      translateY(22px)
-      scale(0.98);
-  }
-
-  to {
-    opacity: 1;
-
-    transform:
-      translateY(0)
-      scale(1);
-  }
-}
 
 
-/* =========================================================
-   NO SERVICES
-========================================================= */
 
 .no-services {
   min-height: 320px;
@@ -1464,10 +1487,6 @@
 }
 
 
-/* =========================================================
-   CTA
-========================================================= */
-
 .services-cta {
   position: relative;
 
@@ -1500,9 +1519,6 @@
 
   margin: 0 auto;
 }
-
-
-/* CTA Icon */
 
 .cta-icon {
   width: 54px;
@@ -1541,9 +1557,6 @@
   }
 }
 
-
-/* CTA small text */
-
 .services-cta-content > span {
   color: #9db9ed;
 
@@ -1553,9 +1566,6 @@
 
   letter-spacing: 2.2px;
 }
-
-
-/* CTA heading */
 
 .services-cta h2 {
   margin: 16px 0;
@@ -1577,9 +1587,6 @@
   color: #a9c5ff;
 }
 
-
-/* CTA paragraph */
-
 .services-cta p {
   max-width: 520px;
 
@@ -1593,9 +1600,6 @@
 }
 
 
-/* =========================================================
-   CTA BUTTON
-========================================================= */
 
 .cta-button {
   width: fit-content;
@@ -1655,9 +1659,6 @@
 }
 
 
-/* =========================================================
-   CTA SNOW
-========================================================= */
 
 .cta-snow {
   position: absolute;
@@ -1696,9 +1697,6 @@
 }
 
 
-/* =========================================================
-   1200px
-========================================================= */
 
 @media (max-width: 1200px) {
 
@@ -1721,12 +1719,39 @@
     grid-template-columns:
       repeat(3, minmax(0, 1fr));
   }
+
+  /* Card */
+
+  .service-card-wrapper {
+    height: 365px;
+  }
+
+  .service-card-wrapper .service-card {
+    height: 365px !important;
+
+    max-height: 365px;
+  }
+
+  .service-card-wrapper .service-image-wrapper {
+    height: 215px !important;
+
+    min-height: 215px !important;
+
+    max-height: 215px !important;
+  }
+   .service-card-wrapper .service-card-content {
+    padding-bottom: 10px !important;
+  }
+
+  .service-card-wrapper .service-card-bottom {
+    margin-top: auto !important;
+    padding-bottom: 0 !important;
+  }
+
+
 }
 
 
-/* =========================================================
-   900px
-========================================================= */
 
 @media (max-width: 900px) {
 
@@ -1785,12 +1810,34 @@
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
   }
+
+
+  /* Card */
+
+  .service-card-wrapper {
+    height: 365px;
+  }
+
+  .service-card-wrapper .service-card {
+    height: 365px !important;
+
+    max-height: 365px;
+  }
+
+  .service-card-wrapper .service-image-wrapper {
+    height: 210px !important;
+
+    min-height: 210px !important;
+
+    max-height: 210px !important;
+  }
+
+  .service-card-wrapper .service-card-content {
+    padding: 10px 15px 5px !important;
+  }
 }
 
 
-/* =========================================================
-   650px
-========================================================= */
 
 @media (max-width: 650px) {
 
@@ -2045,12 +2092,87 @@
   }
 
 
-  /* Grid */
 
   .services-grid {
     grid-template-columns: 1fr;
 
-    gap: 20px;
+    gap: 18px;
+  }
+
+ 
+
+.service-card-wrapper {
+  height: 390px;
+}
+
+.service-card-wrapper .service-card {
+  height: 390px !important;
+
+  max-height: 390px;
+
+  border-radius: 22px;
+}
+
+
+/* Image */
+
+.service-card-wrapper .service-image-wrapper {
+  width: calc(100% - 18px) !important;
+
+  height: 225px !important;
+
+  min-height: 225px !important;
+
+  max-height: 225px !important;
+
+  margin: 9px auto 0;
+
+  border-radius: 18px;
+}
+
+
+/* Image itself */
+
+.service-card-wrapper .service-image {
+  width: 100% !important;
+
+  height: 100% !important;
+
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+
+/* Content */
+
+.service-card-wrapper .service-card-content {
+  padding: 8px 16px 9px !important;
+}
+
+
+/* Reduce empty gap */
+
+.service-card-wrapper .service-card-bottom {
+  margin-top: 0 !important;
+
+  padding-top: 2px;
+}
+
+  .service-card-wrapper .service-card-bottom {
+    margin-top: auto !important;
+
+    padding-top: 3px;
+  }
+
+  .service-card-wrapper .service-image {
+    transform: scale(1);
+
+    object-position: center center;
+  }
+
+  .service-card-wrapper:hover .service-image {
+    transform: scale(1.01);
   }
 
 
@@ -2082,9 +2204,6 @@
 }
 
 
-/* =========================================================
-   380px
-========================================================= */
 
 @media (max-width: 380px) {
 
@@ -2128,16 +2247,53 @@
   .services-cta h2 {
     font-size: 32px;
   }
+
+
+
+.service-card-wrapper {
+  height: 375px;
+}
+
+.service-card-wrapper .service-card {
+  height: 375px !important;
+
+  max-height: 375px;
+
+  border-radius: 21px;
 }
 
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
+.service-card-wrapper .service-image-wrapper {
+  width: calc(100% - 16px) !important;
+
+  height: 215px !important;
+
+  min-height: 215px !important;
+
+  max-height: 215px !important;
+
+  margin: 8px auto 0;
+
+  border-radius: 17px;
+}
+
+
+.service-card-wrapper .service-card-content {
+  padding: 7px 14px 8px !important;
+}
+
+
+.service-card-wrapper .service-card-bottom {
+  margin-top: 0 !important;
+
+  padding-top: 2px;
+}
+}
+
 
 @media (prefers-reduced-motion: reduce) {
 
-  .services-page *,
+  .services-page * ,
   .services-page *::before,
   .services-page *::after {
     animation-duration: 0.01ms !important;
